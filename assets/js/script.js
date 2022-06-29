@@ -28,6 +28,38 @@ else if (length < 8 || length > 128) {
   window.alert("Password needs to be between 8 and 128 characters long.");
   return generatePassword();
 }
+// prompt user for lower case characters
+var lowercaseConfirm = window.confirm ("Would you like to use lowercase letter?") 
+
+// password will include lowercase letter if the statement is true
+if (lowercaseConfirm) {
+passwordCharacter += passwordKey.lowercase
+} 
+
+// password will include uppercase letter if the statement is true
+var uppercaseConfirm = window.confirm("Would you like to use uppercase letter?")
+if (uppercaseConfirm){
+passwordCharacter += passwordKey.uppercase
+}
+
+// password will include symbols if the statement is true
+var symbolConfirm = window.confirm("Would you like to use symbols?")
+if(symbolConfirm){
+passwordCharacter += passwordKey.symbol
+}
+
+// password will include numbers if the statement is true
+var numberConfirm = window.confirm ("Would you like to use numbers?")
+if (numberConfirm){
+passwordCharacter += passwordKey.number
+}
+
+// running loop to get password 
+var passcode ="";
+for (var i=0; i < length; i ++){
+passcode += passwordCharacter [Math.floor(Math.random() * passwordCharacter.length)]
+}
+return passcode;
 }
 // Write password to the #password input
 function writePassword() {
