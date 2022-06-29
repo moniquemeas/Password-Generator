@@ -43,7 +43,7 @@ This appliction is to randomly generate a password for users to protect their se
 
 # Deployment
 
-To deploy this project go to: https://moniquemeas.github.io/password-generator/
+To deploy this project go to: https://moniquemeas.github.io/Password-Generator/
 
 # Contribution
 
